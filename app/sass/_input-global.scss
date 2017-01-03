@@ -1,0 +1,113 @@
+/*--- style-input/textarea---*/
+
+//.input, .textarea{
+////    border: none;
+////    background: #fff;
+////    font-size: 18px;
+////    border-radius: 10px;
+//    -webkit-transition: background .15s ease-in;
+//    transition: background .15s ease-in;
+////    font-weight: 400;
+//}
+//input[placeholder], .textarea[placeholder]{
+//  color:#698fa5;
+//  font-weight: 100;
+//}
+//input[placeholder]:focus, .textarea[placeholder]:focus{
+//  color:#324d5d;
+//  font-weight: 100;
+//}
+//
+//.form-section input {
+//    margin-bottom: 15px;
+//}
+//.input:focus, .textarea:focus {
+//    border-bottom-color: transparent;
+//    background: #e1ecf8;
+//}
+//
+//textarea::-webkit-input-placeholder {
+//color: #698fa5 !important;
+//}
+//
+//textarea:-moz-placeholder { /* Firefox 18- */
+//color: #698fa5 !important;
+//}
+//
+//textarea::-moz-placeholder {  /* Firefox 19+ */
+//color: #698fa5 !important;
+//}
+//
+//textarea:-ms-input-placeholder {
+//color: #698fa5 !important;
+//}
+//
+//
+//input::-webkit-input-placeholder {
+//color:  #698fa5 !important;
+//}
+//
+//input:-moz-placeholder { /* Firefox 18- */
+//color:  #698fa5 !important;
+//}
+//
+//input::-moz-placeholder {  /* Firefox 19+ */
+//color:  #698fa5 !important;
+//}
+//
+//input:-ms-input-placeholder {
+//color:  #698fa5 !important;
+//}
+//
+//input::-webkit-input-placeholder       {line-height: 20px;  transition: line-height 0.5s ease;}
+//input::-moz-placeholder                {line-height: 20px;  transition: line-height 0.5s ease;}
+//input:-moz-placeholder                 {line-height: 20px;  transition: line-height 0.5s ease;}
+//input:-ms-input-placeholder            {line-height: 20px;  transition: line-height 0.5s ease;}
+//input:focus::-webkit-input-placeholder {line-height: 100px; transition: line-height 0.5s ease;}
+//input:focus::-moz-placeholder          {line-height: 100px; transition: line-height 0.5s ease;}
+//input:focus:-moz-placeholder           {line-height: 100px; transition: line-height 0.5s ease;}
+//input:focus:-ms-input-placeholder      {line-height: 100px; transition: line-height 0.5s ease;}
+//
+//textarea::-webkit-input-placeholder {opacity: 1; transition: opacity 0.5s ease;}
+//textarea::-moz-placeholder          {opacity: 1; transition: opacity 0.5s ease;}
+//textarea:-moz-placeholder           {opacity: 1; transition: opacity 0.5s ease;}
+//textarea:-ms-input-placeholder      {opacity: 1; transition: opacity 0.5s ease;}
+//
+//textarea:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.5s ease;}
+//textarea:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.5s ease;}
+//textarea:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.5s ease;}
+//textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.5s ease;}
+//
+//
+//#fb-form .error input.input::-webkit-input-placeholder {color:#ffffff!important;}
+//#fb-form .error input.input::-moz-placeholder          {color:#ffffff!important;}/* Firefox 19+ */
+//#fb-form .error input.input:-moz-placeholder           {color:#ffffff!important;}/* Firefox 18- */
+//#fb-form .error input.input:-ms-input-placeholder      {color:#ffffff!important;}
+//#fb-form .error textarea.textarea::-webkit-input-placeholder {color:#ffffff!important;}
+//#fb-form .error textarea.textarea::-moz-placeholder          {color:#ffffff!important;}/* Firefox 19+ */
+//#fb-form .error textarea.textarea:-moz-placeholder           {color:#ffffff!important;}/* Firefox 18- */
+//#fb-form .error textarea.textarea:-ms-input-placeholder      {color:#ffffff!important;}
+//
+//
+
+
+
+
+
+
+
+
+
+
+//hidden input arrows
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input[type=number] {
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}

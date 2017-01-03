@@ -1,0 +1,40 @@
+.promo-container{
+    @media (min-width: $screen-lg-min) {
+        max-width: 70%;    
+    }
+    @media (max-width: $screen-sm-max) {
+        padding: 0 10%;            
+    }    
+    @media (max-width: $screen-md-max) and (orientation: landscape) {
+        max-width: 70%;    
+    }
+    .promo-item {
+        color: #fff;
+        & .item-logo{
+            margin-bottom: 30px;
+        }
+        .promo-link{
+            display: inline-block;
+        }
+        .promo-logo{
+            @media (min-width: $screen-lg-min) {
+                min-width: 300px;    
+            }
+            
+        }
+        .item-subtitle{
+            font-size: 38px;
+            margin: 30px auto;
+            @media (max-width: $screen-md-max) {
+                font-size: 2em;                
+            }
+        }
+        .item-sale{
+            font-size: 20px;
+            @media (max-width: $screen-md-max) {
+                font-size: 1.2em;                
+            }
+        }
+        
+    }
+}

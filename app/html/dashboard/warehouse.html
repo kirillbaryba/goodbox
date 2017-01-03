@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Goodbox</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <!-- Template -->
+    <link rel="stylesheet" href="/dist/css/main.min.css">
+    <link rel="stylesheet" href="/app/bower_components/filament-tablesaw/dist/tablesaw.css">
+    <link rel="stylesheet" href="/app/bower_components/filament-tablesaw/dist/icons/**">
+
+    <!-- Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" rel="stylesheet" type='text/css'>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="/dist/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/dist/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="/dist/js/bootstrap-typeahead.js"></script>
+    <script type="text/javascript" src="/dist/js/goodbox.js"></script>
+    <script src="/app/bower_components/filament-tablesaw/dist/tablesaw.js"></script>
+    <script src="/app/bower_components/filament-tablesaw/dist/tablesaw-init.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <section class="main-admin">
+        <!-- mobile/tablet-nabvar -->
+        <nav class="navbar navbar-default navbar-fixed-top hidden-lg">
+            <div class="container-fluid">
+                <div class="navbar-body">
+                    <a class="navbar-logo" href="#"><img class="navbar-img" alt="Goodbox" src="/dist/img/goodbox-logo.svg"></a>
+                    <a id="btn-toggle-mobile" href="#" class="btn-toggle-mobile"><span class="icon icon-lg icon-menu-arrow"></span></a>
+                </div>
+            </div>
+        </nav>
+        <!-- mobile/tablet-nabvar -->
+        <div id="backdrop" class="menu-backdrop hide"></div>
+        <main class="main-dashboard">
+            <header class="main-header">
+                <div class="main-container">
+                    <h1 class="main-title">Warehouse</h1>
+                </div>
+            </header>
+            <!-- main-toolbar -->
+            <div class="main-toolbar toolbar-grey" id="toolbar">
+                <div class="main-container">
+                    <div class="transaction">                        
+                        <!-- main-search -->                        
+                            <div class="form-search col-sm-6 col-xs-11">
+                                <div class="form-group">
+                                    <input id="live-search" type="text" class="form-control" placeholder="Enter name, id or barcode">
+                                    <span class="icon icon-search"></span>
+                                </div>
+                            </div>                            
+                            <!-- /main-search -->                           
+                        </div>
+                    </div>
+                </div>
+                <!-- /main-toolbar -->
+
+                <div class="main-container">
+                    <div class="main-list" id="main-list">
+                        <div class="table-outline">
+                            <!-- sort-table-->
+                            <table class="table tablesaw table-striped" data-tablesaw-sortable tablesaw-columntoggle data-tablesaw-mode="stack">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist">Product Name</th>
+                                        <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="6">Quantity</th>
+                                        <th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col data-tablesaw-priority="3">Vendor code</th>
+                                        <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4">Barecode</th>
+                                        <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2">Purchase price</th>
+                                        <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="1">Selling price</th>
+                                        <!--                            <abbr title="Rotten Tomato Rating"></abbr>-->
+                                        <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="5">Points</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="title-catalogue">
+                                            <a class="title-link" href="#">AWWERTISTRY Кассета для Устройства для тестирования кожи</a>
+                                        </td>
+                                        <td>12</td>
+                                        <td>235550PM</td>
+                                        <td>5-112585-23</td>
+                                        <td class="td-amount receipt-amount ">35 762,98 EUR</td>
+                                        <td class="td-amount expend-amount">15 762,98 EUR</td>
+                                        <td class="td-date">12.35</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="title-catalogue">
+                                            <a class="title-link" href="#">A2RTISTRY Кассета для Устройства для тестирования кожи</a>
+                                        </td>
+                                         <td>562</td>
+                                        <td>562950PM</td>
+                                        <td>5-112585-23</td>
+                                        <td class="td-amount receipt-amount ">13 762,98 EUR</td>
+                                        <td class="td-amount expend-amount">5 762,98 EUR</td>
+                                        <td class="td-date">10.35</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title-catalogue">
+                                            <a class="title-link" href="#">ARTISTRY Кассета для Устройства для тестирования кожи</a>
+                                        </td>
+                                         <td>312</td>
+                                        <td>232950PM</td>
+                                        <td>5-112585-23</td>
+                                        <td class="td-amount receipt-amount ">35 762,98 EUR</td>
+                                        <td class="td-amount expend-amount">15 762,98 EUR</td>
+                                        <td class="td-date">12.35</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title-catalogue">
+                                            <a class="title-link" href="#">ARTISqweTRY Кассета для Устройства для тестирования кожи</a>
+                                        </td>
+                                         <td>521</td>
+                                        <td>232954PM</td>
+                                        <td>5-112585-23</td>
+                                        <td class="td-amount receipt-amount ">35 762,98 EUR</td>
+                                        <td class="td-amount expend-amount">15 762,98 EUR</td>
+                                        <td class="td-date">12.35</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title-catalogue">
+                                            <a class="title-link" href="#">ARweTISTRY Кассета для Устройства для тестирования кожи</a>
+                                        </td>
+                                         <td>754</td>
+                                        <td>232922PM</td>
+                                        <td>6-112585-23</td>
+                                        <td class="td-amount receipt-amount ">35 762,98 EUR</td>
+                                        <td class="td-amount expend-amount">15 762,98 EUR</td>
+                                        <td class="td-date">6.35</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title-catalogue">
+                                            <a class="title-link" href="#">ARTSFISTRY Кассета для Устройства для тестирования кожи</a>
+                                        </td>
+                                         <td>24</td>
+                                        <td>232350PM</td>
+                                        <td>5-112585-23</td>
+                                        <td class="td-amount receipt-amount ">35 762,98 EUR</td>
+                                        <td class="td-amount expend-amount">15 762,98 EUR</td>
+                                        <td class="td-date">12.35</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title-catalogue">
+                                            <a class="title-link" href="#">ARTIFSTRY Кассета для Устройства для тестирования кожи</a>
+                                        </td>
+                                         <td>2</td>
+                                        <td>232950PM</td>
+                                        <td>5-112235-23</td>
+                                        <td class="td-amount receipt-amount ">35 762,98 EUR</td>
+                                        <td class="td-amount expend-amount">15 762,98 EUR</td>
+                                        <td class="td-date">12.35</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title-catalogue">
+                                            <a class="title-link" href="#">ARTISDTRY Кассета для Устройства для тестирования кожи</a>
+                                        </td>
+                                         <td>8</td>
+                                        <td>232950PM</td>
+                                        <td>5-112585-23</td>
+                                        <td class="td-amount receipt-amount ">35 762,98 EUR</td>
+                                        <td class="td-amount expend-amount">15 762,98 EUR</td>
+                                        <td class="td-date">3.35</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title-catalogue">
+                                            <a class="title-link" href="#">ARTISFTRY Кассета для Устройства для тестирования кожи</a>
+                                        </td>
+                                         <td>2</td>
+                                        <td>232950PM</td>
+                                        <td>5-112585-23</td>
+                                        <td class="td-amount receipt-amount ">35 762,98 EUR</td>
+                                        <td class="td-amount expend-amount">15 762,98 EUR</td>
+                                        <td class="td-date">16.35</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title-catalogue">
+                                            <a class="title-link" href="#">ARTIFSTRY Кассета для Устройства для тестирования кожи</a>
+                                        </td>
+                                        <td>9</td>
+                                        <td>232950PM</td>
+                                        <td>5-112685-23</td>
+                                        <td class="td-amount receipt-amount ">35 76,98 EUR</td>
+                                        <td class="td-amount expend-amount">1 762,98 EUR</td>
+                                        <td class="td-date">1.35</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- /sort-table-->
+                        </div>
+                        <a href="#" class="btn btn-primary btn-outline btn-showmore center-block">Show more</a>
+                    </div>
+                </div>
+        </main>
+        <aside class="sidebar sidebar-right" id="sidebar">
+            <div class="sidebar-login">
+                <div class="sidebar-main">
+                    <div class="wrapper-form">
+                        <div class="header-nav visible-lg">
+                            <a href="#" class="logo-nav"><img src="/dist/img/goodbox-logo.svg" alt="Goodbox"></a><a href="#" class="btn-toggle"><span class="icon icon-lg icon-menu-arrow"></span></a>
+                        </div>
+                        <nav class="main-nav">
+                            <div class="wr-info">
+                                <ul class="list-unstyled">
+                                    <li class="wr-name">
+                                      <div class="wr-item wr-name-icon">
+                                           <span class="wr-name-ttl" data-wname="W"></span>
+                                       </div>
+                                       <div class="wr-item wr-name-main">
+                                           <p class="wr-name-txt"> Warehouse</p>
+                                            <p class="wr-mail">goodbox@gmail.com</p>
+                                        </div>
+                                    </li>
+                                    <li class="wr-total"><span class="icon-sm icon-goods"></span><span class="span wr-total-summ"> 12 343 567 EUR <span> Goods</span></span>
+                                    </li>
+                                    <li class="wr-money text-danger"><span class="icon-sm icon-money"></span> <span class="wr-money-summ"> 7 674 765,89 EUR</span></li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="nav-link-wrapper">
+                                <ul class="list-unstyled">
+                                    <li class="nav-link-item">
+                                        <a class="active" href="#" data-toggle="tooltip" data-placement="left" title="Сводка">
+                                            <span class="icon icon-lg icon-warehouse"></span><span class="menu-title"> Сводка</span></a>
+                                    </li>
+                                    <li class="nav-link-item">
+                                        <a href="#"><span class="icon icon-lg icon-goods"></span><span class="menu-title"> Склад</span></a>
+                                    </li>
+                                    <li class="nav-link-item">
+                                        <a href="#"><span class="icon icon-lg icon-transactions"></span>                                 
+                                    <span class="menu-title"> Транзакции</span>
+                                <span class="menu-title-badge badge badge-primary"> 3</span>
+                                </a>
+                                    </li>
+                                    <li class="nav-link-item">
+                                        <a href="#"><span class="icon icon-lg icon-transport"></span><span class="menu-title"> Поставщик</span></a>
+                                    </li>
+                                    <li class="nav-link-item">
+                                        <a href="#"><span class="icon icon-lg icon-profile"></span><span class="menu-title"> Покупатели</span></a>
+                                    </li>
+                                    <li class="nav-link-item">
+                                        <a href="#"><span class="icon icon-lg icon-reports"></span><span class="menu-title"> Отчеты</span></a>
+                                    </li>
+                                    <li class="nav-link-item">
+                                        <a href="#"><span class="icon icon-lg icon-settings"></span><span class="menu-title"> Настройки</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <div class="add-delivery btn-vertical">
+                            <button class="btn btn-lg btn-danger btn-receipt" data-toggle="modal" data-target=".modal-receipt">
+                                <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+                                <span class="btn-menu-title">Receipt</span></button>
+                            <button class="btn btn-lg btn-success btn-expenditure" data-toggle="modal" data-target=".modal-expenditure">
+                                <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+                                <span class="btn-menu-title">Expenditure</span></button>
+                        </div>
+                        <p class="made"><span class="copiright">Made with </span> <span class="icon-heart animated infinite"></span> <span class="copiright"> in</span> <a href="http://en.yena.at" target="_blank">YENA Software GmbH</a></p>
+                    </div>
+        </aside>
+    </section>
+
+</body>
+
+</html>

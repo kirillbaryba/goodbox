@@ -1,0 +1,325 @@
+//button
+// showmore
+.btn-showmore {
+    width: 250px;
+}
+.btn-250{
+    max-width: 250px;
+    @media (max-width: $screen-xs-max) {
+        margin: 0 auto;
+        max-width: 100%;    
+    }
+    
+}
+.btn-120{
+    width: 120px;
+    @media (max-width: $screen-xs-max) {
+        margin: 0 auto;        
+    }
+}
+
+.btn-apply{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+     @media (max-width: $screen-xs-max) {
+        margin: 30px auto;        
+         position: relative;
+         display: block;
+         right: 0;
+         
+    }
+}
+
+//outline btn mixin
+// Alternate buttons
+// --------------------------------------------------
+@mixin button-outline($color, $background, $border) {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+    &:focus,
+    &.focus {
+        color: darken($color, 25%);
+        //background-color: darken($background, 10%);
+        background-color: transparent;
+        border-color: darken($border, 25%);
+    }
+    &:hover {
+        color: darken($color, 12%);
+        //background-color: darken($background, 10%);
+        background-color: transparent;
+        border-color: darken($border, 12%);
+    }
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+        color: darken($color, 12%);
+        //background-color: darken($background, 10%);
+        background-color: transparent;
+        border-color: darken($border, 12%);
+        &:hover,
+        &:focus,
+        &.focus {
+            color: darken($color, 25%);
+            //background-color: darken($background, 17%);
+            background-color: transparent;
+            border-color: darken($border, 25%);
+        }
+    }
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+        background-image: none;
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &:hover,
+        &:focus,
+        &.focus {
+            color: darken($color, 50%);
+            background-color: $background;
+            border-color: $border;
+        }
+    }
+    .badge {
+        color: $background;
+        background-color: $color;
+    }
+}
+
+//inverce btn mixin
+@mixin button-inverse($color, $background, $border) {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+    &:focus,
+    &.focus {
+        color: darken($color, 5%);
+        //background-color: darken($background, 10%);
+        background-color: transparent;
+        border-color: darken($border, 5%);
+    }
+    &:hover {
+        color: darken($color, 10%);
+        //background-color: darken($background, 10%);
+        background-color: transparent;
+        border-color: darken($border, 10%);
+    }
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+        color: darken($color, 12%);
+        //background-color: darken($background, 10%);
+        background-color: transparent;
+        border-color: darken($border, 12%);
+        &:hover,
+        &:focus,
+        &.focus {
+            color: darken($color, 12%);
+            //background-color: darken($background, 17%);
+            background-color: transparent;
+            border-color: darken($border, 12%);
+        }
+    }
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+        background-image: none;
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &:hover,
+        &:focus,
+        &.focus {
+            color: darken($color, 50%);
+            background-color: $background;
+            border-color: $border;
+        }
+    }
+    .badge {
+        color: $background;
+        background-color: $color;
+    }
+}
+
+//inverce btn mixin
+@mixin button-link-variant($color) {
+    color: $color;   
+    &:focus,
+    &.focus {
+        color: darken($color, 5%);        
+    }
+    &:hover {
+        color: darken($color, 10%);        
+    }
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+        color: darken($color, 12%);    
+        &:hover,
+        &:focus,
+        &.focus {
+            color: darken($color, 12%);            
+        }
+    }
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+        background-image: none;
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &:hover,
+        &:focus,
+        &.focus {
+            color: darken($color, 50%);            
+        }
+    }
+    .badge {
+        color: $color;        
+    }
+}
+
+
+
+
+
+// Alternate outline buttons
+// --------------------------------------------------
+.btn-default {
+    //@include button-outline($btn-default-color, $btn-default-bg, $btn-default-border);
+    &.btn-outline {
+        @include button-outline($btn-default-bg, transparent, $btn-default-border);
+    }
+}
+
+.btn-primary {
+    //@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+    &.btn-outline {
+        @include button-outline($btn-primary-bg, transparent, $btn-primary-border);
+    }
+}
+
+// Success appears as green
+.btn-success {
+    //@include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+    &.btn-outline {
+        @include button-outline($btn-success-bg, transparent, $btn-success-border);
+    }
+}
+
+// Info appears as blue-green
+.btn-info {
+    //@include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+    &.btn-outline {
+        @include button-outline($btn-info-bg, transparent, $btn-info-border);
+    }
+}
+
+// Warning appears as orange
+.btn-warning {
+    // @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+    &.btn-outline {
+        @include button-outline($btn-warning-bg, transparent, $btn-warning-border);
+    }
+}
+
+// Danger and error appear as red
+.btn-danger {
+    // @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+    &.btn-outline {
+        @include button-outline($btn-danger-bg, transparent, $btn-danger-border);
+        &.btn-inverse {
+            @include button-inverse($btn-danger-color, transparent, $btn-danger-color);
+        }
+    }
+}
+
+//modify btn-link color
+.btn-link{
+    &.btn-link-danger{
+        @include button-link-variant($btn-danger-color);
+    }
+}
+
+
+.btn-expenditure,
+.btn-receipt {
+    min-width: $global-vw;
+    .btn-menu-title {
+        text-align: center;
+    }
+    .glyphicon {
+        display: none;
+    }
+}
+
+.menu-sm {
+    .btn-expenditure,
+    .btn-receipt {
+        display: block;
+        min-width: 50px;
+        .glyphicon {
+            display: block;
+        }
+    }
+}
+
+//modal buttons 
+.btn-vertical {
+    .btn {
+        min-height: 34px;
+        margin-bottom: 10px;
+        :last-child {
+            margin-bottom: 0;
+        }
+        .receipt-txt,
+        .expend-txt {
+            float: left;            
+        }
+        .receipt-txt{
+            color: #811c19;
+        }
+        .expend-txt{
+            color: #1a6219;
+        }
+        .receipt-summ, .expend-summ{
+            float: right;            
+        }
+        
+    }
+}
+
+.btn-group {
+    width: 100%;
+    &.btn-group-block {
+        > .btn {
+            width: 50%;
+        }
+    }
+}
+
+//fix btn with icon mobile
+.btn-icon{
+    @media (max-width: $screen-xs-max) {
+        min-height: 34px;    
+        padding-top: 8px;
+    }
+    
+}
+
+//btn-social-group
+.btn-social-group{
+    + .btn-social-group,  &{
+        margin-top: 60px;    
+    }    
+}
+.btn-reverse{
+    font-size: 16px;
+    border-radius: $border-radius-base;
+    padding: 11px 44px;
+}

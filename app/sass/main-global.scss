@@ -1,0 +1,97 @@
+html,
+body {
+    height: $global-vh;
+    min-height: $global-vh;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+.main-login {
+    min-height: $global-vh;
+    display: table;
+    width: $global-vw;
+    &.offcanvas-right {
+        @media (max-width: $screen-md-max) {
+            //right: 330px;
+            position: relative;
+            transition: all ease .5s;
+            -webkit-transition: all ease .5s;
+            transform: translateX(-330px);
+            -webkit-transform: translateX(-330px);
+        }
+        .btn-toggle-mobile {
+            right: -310px;
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+        }
+        .navbar {
+            //right: 330px;
+            transition: all ease .5s;
+        }
+    }
+    @media (max-width: $screen-md-max) {
+        padding-top: 50px;
+        position: relative;
+        transition: all ease .5s;
+        -webkit-transition: all ease .5s;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+    }
+}
+
+.main-color {
+    background-color: $login-empty-bg;
+}
+
+
+.main-empty {
+    display: table-cell;
+    vertical-align: middle;
+    &.sidebar-right {
+        @media (min-width: $screen-md-min) {
+            padding-left: 10%;
+        }
+    }
+    .main-footer {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+.main-dashboard {
+    width: $global-vw;
+    float: left;
+    min-height: 100vh;
+    position: relative;
+}
+.main-container {
+    @media (min-width: 1680px) {
+        padding-left: 330px;
+        //padding-right: 345px;
+    }
+}
+
+.main-list{
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 15px;
+    transition: all ease 0.5s; 
+    margin-bottom: 15px;
+    position: relative;
+    @media (min-width: 320px) and (max-width: $screen-md-max) {
+        margin: 0 15px;
+        margin-bottom: 15px;
+    }               
+       @media (min-width: $screen-md-max) {
+        margin-right: 345px;   
+        margin-left: 15px;
+    }    
+    
+    &.full-width {
+        margin-right: 110px;
+        transition: all ease 0.5s;
+        -webkit-transition: all ease 0.5s;
+    }
+}

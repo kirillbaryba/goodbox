@@ -1,0 +1,82 @@
+.reports-list {
+    position: relative;
+}
+
+.reports-panel-ttl {
+    margin: 0;
+    width: 100%;
+    @extend .v-middle;
+}
+
+.item-pl {
+    position: relative;
+    padding: 15px 0;
+    &:after {
+        content: ' ';
+        border-bottom: 1px solid #e6e6e6;
+        display: table;
+        width: calc(100% - 40px);
+        padding-bottom: 15px;
+        margin-left: 40px;
+    }
+}
+
+.receipts-dt-item,
+.expenditures-dt-item,
+.profit-dt-item {
+    font-size: 22px;
+    @extend .fw-300;
+    > span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.receipts-dt-summ,
+.profit-dt-summ,
+.expenditures-dt-summ {
+    font-size: 18px;
+    @extend .fw-300;
+    > span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+.receipts-dt-label, .expenditures-dt-label, .profit-dt-label{
+    font-size: 24px;
+    @extend .is-lgray;
+    @extend .fw-300;
+}
+.expenditures-dt-label,
+.profit-dt-label{
+    @media (max-width: $screen-sm-min) {
+        margin-top: 30px;    
+    }
+    
+}
+.expenditures-dt {
+    position: relative;
+    &:after,
+    &:before {
+        content: ' ';
+        height: 100%;
+        position: absolute;
+        top: 0;
+    }
+    &:after {
+        border-right: 1px solid #e6e6e6;
+        right: -30px;
+    }
+    &:before {
+        border-left: 1px solid #e6e6e6;
+        left: -30px;
+    }
+    
+    
+}
+
+.item-icon {
+    [class*="icon-"] {
+        padding-right: 15px;
+    }
+}

@@ -1,0 +1,102 @@
+$modal-transaction-bg: #ccc;
+$modal-transaction-pd: 30px;
+$table-transaction-bg: #fff;
+
+//.modal-transactions-dt {    
+    .order-entry {
+        border-bottom: 1px solid #ccc;
+        padding-bottom: $modal-transaction-pd;
+        &-total {
+            border: none;
+            position: relative;
+            &:after, &:before {
+                content: ' ';
+                width: 100%;
+                display: table;
+            }
+            &:after {
+                border-bottom: 1px solid #ccc;                
+                padding-top: 15px;
+                margin-bottom: 15px;
+            }
+            &:before {
+                border-top: 1px solid #ccc;                
+                padding-bottom: 15px;
+            }
+        }
+        &-ttl {
+            margin-top: 0;
+            margin-bottom: $modal-transaction-pd;            
+            @media (max-width: $screen-sm-min) {
+                margin-bottom: $modal-transaction-pd / 2;
+            }
+            @media (min-width: $screen-sm-min) {
+                margin-top: 0;                               
+            }
+             > .order-entry-item{
+                   @media (min-width: $screen-sm-min) {
+                    padding-left: $modal-transaction-pd / 2;
+                 }
+                 @media (max-width: $screen-sm-min) {
+                        line-height: 2;
+                 }
+                }
+        }
+        &-amount,
+        &-total {
+            padding: 0;
+            @media (max-width: $screen-sm-min) {
+                padding-bottom:  $modal-transaction-pd / 2;
+            }
+        }
+    }
+
+
+.reverse-transaction {
+    display: table;
+    background: $modal-transaction-bg;
+    width: 100%;
+    padding: 15px 30px;
+    @media (max-width: $screen-xs-max) {
+        padding: $modal-transaction-pd / 2;
+    }
+    .transaction-item {
+        display: table-cell;
+        vertical-align: middle;       
+        @media (max-width: $screen-xs-max) {
+            display: inline-block;
+            width: 100%;
+        }
+        > .icon {
+            padding-right: 15px;
+        }
+        > span {
+            vertical-align: middle;        
+        }
+        &.trans-btn-rev {
+            text-align: right;
+            @media (max-width: $screen-xs-max) {
+                text-align: center;
+            }
+        }
+    }
+    .transaction-item + .transaction-item{
+            margin-top: $modal-transaction-pd / 2;
+        }
+}
+
+.entry-comments {
+    &-ttl {
+        @extend .fw-700;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+    &-res {}
+}
+
+.table-modal{
+    padding: $modal-transaction-pd / 2;
+    margin: $modal-transaction-pd 0;   
+    background-color: $table-transaction-bg;
+    border-radius: 4px;
+}

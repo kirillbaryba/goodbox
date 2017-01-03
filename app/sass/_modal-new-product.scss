@@ -1,0 +1,47 @@
+.modal-add-product{
+    hr{
+        margin-bottom: 30px;
+    }
+}
+.drag-image-box{
+    border: 2px dashed #ccc;
+    text-align: center;
+    min-height: 242px;
+    border-radius: 4px;
+    display: table;
+    width: 100%;
+    &-empty{
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 20%;
+        cursor: pointer;
+        .icon{
+            margin-bottom: 15px;
+        }
+        .icon-lg{
+            font-size: 4em;    
+        }
+        .is-lgray{
+            @include opacity(.4);
+        }
+        
+    }
+}
+.product-info-list{
+    margin: 0;
+    padding: 15px 0;
+    .product-item{        
+        font-size: 16px;
+        @extend .v-middle;
+        > .icon{
+           padding-right: 20px; 
+        }
+        &-tx{
+          color: #999999;
+            padding-right: 5px;
+        }   
+}
+    .product-item + .product-item{
+        margin-top: 10px;
+    }
+}

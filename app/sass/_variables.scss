@@ -1,0 +1,30 @@
+$icon-font-path: '../fonts/';
+//body, html
+$global-vh: 100%;
+$global-vw: 100%;
+
+//login empry
+$login-empty-bg: #db6659;
+
+//form label
+$form-label-lightgrey: #b4b4b4;
+
+//button customize
+//$brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
+//$brand-showmore:         $brand-primary !default;
+
+/*$btn-showmore-color:               $brand-primary !default;
+$btn-showmore-bg:                  transparent !default;
+$btn-showmore-border:              $brand-primary !default;*/
+$btn-showmore-width:               240px !default;
+
+
+
+//sidebar
+$sidebar-bg-color: #e6e6e6;
+$sidebar-bg-dark-color: #d2d2d2;
+$sidebar-bg-light-color: #dcdcdc;
+$sidebar-vw: 330px;
+$sidebar-pd: 25px 30px;
+$sidebar-tx-color: #555555;
+$sidebar-sub-title-color: #777777;

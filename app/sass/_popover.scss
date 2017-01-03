@@ -1,0 +1,36 @@
+//customize-tooltip
+@media (min-width: $screen-xs-max) {
+    .has-error {
+        position: relative;
+        .popover.fade.in.left {
+            display: block;
+            left: -100%;
+            top: 12px;
+            margin-left: 0px;
+        }
+        .popover.fade.in.top {
+            display: block;
+            left: 0;
+            top: -50px;
+            margin-left: 0px;
+        }
+    }
+    //popover-content
+    .popover-content {
+        .popover-txt {
+            padding-left: 10px;
+            .help-block{
+             margin: 0;   
+            }
+            
+        }
+        .popover-icon {
+            font-size: 2em;
+        }
+        .popover-icon,
+        .popover-txt {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+}

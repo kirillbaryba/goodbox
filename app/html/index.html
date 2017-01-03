@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Goodbox</title>
+    <!-- Template -->
+    <link rel="stylesheet" href="/dist/css/main.min.css">    
+    <link rel="stylesheet" href="/app/bower_components/filament-tablesaw/dist/tablesaw.css">
+    <link rel="stylesheet" href="/app/bower_components/filament-tablesaw/dist/icons/**">
+        
+    <!-- Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" rel="stylesheet" type='text/css'>
+     
+      <!-- JavaScript -->
+    <script type="text/javascript" src="/dist/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/dist/js/goodbox.js"></script>
+    <script type="text/javascript" src="/dist/js/bootstrap.min.js"></script>
+<!--    <script src="/app/bower_components/filament-tablesaw/dist/tablesaw.js"></script>-->
+    	<script src="/app/bower_components/filament-tablesaw/dist/dependencies/jquery.js"></script>
+	<script src="/app/bower_components/filament-tablesaw/dist/tablesaw.js"></script>
+	<script src="/app/bower_components/filament-tablesaw/dist/tablesaw-init.js"></script>
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->    
+</head>
+
+<body>
+<main class="container-fluid">    
+   <div class="row">
+    <section class="main">
+        <article class="main-container">
+            <div class="main-wrapper">
+            
+            
+<!--            data-tablesaw-sortable-switch-->
+            <table class="table tablesaw table-striped" data-tablesaw-sortable tablesaw-columntoggle>
+			<thead>
+				<tr>
+					<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist">Movie Title</th>
+					<th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col data-tablesaw-priority="3">Rank</th>
+					<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2">Year</th>
+					<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="1"><abbr title="Rotten Tomato Rating">Rating</abbr></th>
+					<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4">Gross</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="title"><a href="http://en.wikipedia.org/wiki/Avatar_(2009_film)">Avatar</a></td>
+					<td>1</td>
+					<td>2009</td>
+					<td>83%</td>
+					<td>$2.7B</td>
+				</tr>
+				<tr>
+					<td class="title"><a href="http://en.wikipedia.org/wiki/Titanic_(1997_film)">Titanic</a></td>
+					<td>2</td>
+					<td>1997</td>
+					<td>88%</td>
+					<td>$2.1B</td>
+				</tr>
+				<tr>
+					<td class="title"><a href="http://en.wikipedia.org/wiki/The_Avengers_(2012_film)">The Avengers</a></td>
+					<td>3</td>
+					<td>2012</td>
+					<td>92%</td>
+					<td>$1.5B</td>
+				</tr>
+				<tr>
+					<td class="title"><a href="http://en.wikipedia.org/wiki/Harry_Potter_and_the_Deathly_Hallows_%E2%80%93_Part_2">Harry Potter and the Deathly Hallows—Part 2</a></td>
+					<td>4</td>
+					<td>2011</td>
+					<td>96%</td>
+					<td>$1.3B</td>
+				</tr>
+				<tr>
+					<td class="title"><a href="http://en.wikipedia.org/wiki/Frozen_(2013_film)">Frozen</a></td>
+					<td>5</td>
+					<td>2013</td>
+					<td>89%</td>
+					<td>$1.2B</td>
+				</tr>
+				<tr>
+					<td class="title"><a href="http://en.wikipedia.org/wiki/Iron_Man_3">Iron Man 3</a></td>
+					<td>6</td>
+					<td>2013</td>
+					<td>78%</td>
+					<td>$1.2B</td>
+				</tr>
+				<tr>
+					<td class="title"><a href="http://en.wikipedia.org/wiki/Transformers:_Dark_of_the_Moon">Transformers: Dark of the Moon</a></td>
+					<td>7</td>
+					<td>2011</td>
+					<td>36%</td>
+					<td>$1.1B</td>
+				</tr>
+				<tr>
+					<td class="title"><a href="http://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Return_of_the_King">The Lord of the Rings: The Return of the King</a></td>
+					<td>8</td>
+					<td>2003</td>
+					<td>95%</td>
+					<td>$1.1B</td>
+				</tr>
+				<tr>
+					<td class="title"><a href="http://en.wikipedia.org/wiki/Skyfall">Skyfall</a></td>
+					<td>9</td>
+					<td>2012</td>
+					<td>92%</td>
+					<td>$1.1B</td>
+				</tr>
+				<tr>
+					<td class="title"><a href="http://en.wikipedia.org/wiki/Transformers:_Age_of_Extinction">Transformers: Age of Extinction</a></td>
+					<td>10</td>
+					<td>2014</td>
+					<td>18%</td>
+					<td>$1.0B</td>
+				</tr>
+			</tbody>
+		</table>
+            
+            
+            
+            
+            
+            
+            <script type="text/javascript">
+   $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>            
+
+            </div>
+        </article>
+        <aside class="menu-right" id="sidebar">
+            <div class="wrapper-form">
+                <div class="header-nav">
+                    <a href="#" class="logo-nav"><img src="../img/goodbox-logo.svg" alt="Goodbox"></a><a href="#" class="btn-toggle"><span class="icon icon-menu-arrow"></span></a>
+                </div>
+                <nav class="main-nav">
+                    <div class="wr-info">
+                        <ul class="list-unstyled">
+                            <li class="wr-name"><span class="icon icon-wrh">W</span>Warehouse
+                                <p class="wr-mail">goodbox@gmail.com</p>
+                            </li>
+                            <li class="wr-total"><span class="icon-sm icon-goods"></span><b>12 343 567 <span>Goods</span></b></li>
+                            <li class="wr-money text-danger"><span class="icon-sm icon-money"></span>7 674 765,89 EUR</li>
+                        </ul>                        
+                    </div>
+                    <hr>
+                    <div class="nav-link-wrapper">
+                    <a class="active" href="#" data-toggle="tooltip" data-placement="left" title="Сводка">
+                        <span class="icon icon-warehouse"></span><span class="menu-title"> Сводка</span></a>
+                    <a href="#"><span class="icon icon-goods"></span><span class="menu-title"> Склад</span></a>
+                    <a href="#"><span class="icon icon-transactions"></span> <span class="menu-title"> Транзакции</span></a>
+                    <a href="#"><span class="icon icon-transport"></span><span class="menu-title"> Поставщик</span></a>
+                    <a href="#"><span class="icon icon-profile"></span><span class="menu-title"> Покупатели</span></a>
+                    <a href="#"><span class="icon icon-profile"></span><span class="menu-title"> Отчеты</span></a>
+                    <a href="#"><span class="icon icon-settings"></span><span class="menu-title"> Настройки</span></a>
+                    </div>
+                </nav>
+                <div class="add-delivery">
+                    <button class="btn btn-lg btn-danger btn-block">
+                       <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+                        <span class="btn-menu-title">Поступление</span></button>
+                    <button class="btn btn-lg btn-success btn-block">
+                        <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+                        <span class="btn-menu-title">Списание</span></button>
+                </div>
+                <p class="made"><span class="copiright">Сделано с</span> <span class="icon-heart animated infinite"></span> <span class="copiright"> в</span> <a href="http://en.yena.at" target="_blank">YENA Software GmbH</a></p>
+            </div>
+        <div class="tooltip top" role="tooltip">
+    <div class="tooltip-arrow"></div>
+    <div class="tooltip-inner">
+    </div>
+</div>
+        </aside>
+    </section>
+    </div>
+</main>    
+    
+    
+   
+</body>
+
+</html>

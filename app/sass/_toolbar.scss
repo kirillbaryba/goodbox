@@ -1,0 +1,68 @@
+$toolbar-vh: 65px;
+$toolbar-pd: 15px;
+.main-toolbar {
+    min-height: $toolbar-vh;
+    padding: $toolbar-pd;
+    margin-bottom: $toolbar-pd;
+    position: relative;
+    @media (min-width: $screen-md-max) {
+        padding-right: 360px;
+    }
+    transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    &.modal-toolbar {
+        margin: 0;
+        @media (min-width: $screen-md-max) {
+            .transaction {
+                margin: 0 -15px;
+            }
+        }
+    }
+    &.full-width {
+        padding-right: 125px;
+        transition: all ease 0.5s;
+        -webkit-transition: all ease 0.5s;
+    }
+    .form-group {
+        @media (min-width: $screen-sm-min) {
+            margin-bottom: 0;
+        }
+    }
+    .transaction-collapse {
+        @media (max-width: $screen-xs-max) {
+            clear: both;
+            .form-customer {
+                margin-top: 15px;
+            }
+        }
+        .form-code {
+            .form-group {
+                @media (max-width: $screen-xs-max) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.toolbar-grey {
+    background-color: $sidebar-bg-color;
+}
+
+.toolbar-dark-grey {
+    background-color: $sidebar-bg-dark-color;
+}
+
+.toolbar-light-grey {
+    background-color: $sidebar-bg-light-color;
+}
+
+.mobile-filter {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    .btn-link {
+        font-size: 20px;
+        padding: 0;
+    }
+}

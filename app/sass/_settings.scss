@@ -1,0 +1,60 @@
+.main-list-title {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.main-list-row {
+    padding-bottom: 60px;
+}
+
+//settings vendors list
+.vendor-list {
+    .vendor-item {
+        display: inline-block;
+        vertical-align: middle;
+        &.vendor-type {
+            line-height: 1.1;
+            font-size: $font-size-h3;
+        }
+        &.vendor-sub-title {
+            line-height: 1;
+            padding-top: 5px;
+            @media (max-width: $screen-xs-max) {
+                padding-left: 15px;
+            }
+        }
+    }
+}
+
+.card {    
+    @extend .text-center;
+    border-radius: $border-radius-base;    
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    margin-bottom: 30px;
+    &-body{
+        padding: 20px 15px;
+    }
+    &-ttl {
+        font-size: 1.071em;
+        @extend .h1; 
+        @extend .text-uppercase;
+        @extend .fw-700;
+    }
+    &-hr{
+        border-top-color: #ccc;
+    }
+    &-price{
+        @extend .v-middle;
+        margin: 0 auto;
+        &-summ{
+            @extend .fw-700;
+            font-size: 1.071em;
+            padding-left: .5em;
+        }
+    }
+    .btn{
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;   
+    }
+}

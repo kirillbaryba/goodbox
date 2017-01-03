@@ -1,0 +1,7 @@
+.v-middle {
+    display: table;
+    > span {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}

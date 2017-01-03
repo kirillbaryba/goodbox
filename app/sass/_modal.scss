@@ -1,0 +1,320 @@
+.modal-header{
+    @media (max-width: $screen-xs-max) {
+        padding: 15px;
+    }
+}
+.modal-body{
+    min-height: inherit;
+    @media (max-width: $screen-xs-max) {
+        padding: 15px;
+    } 
+}
+
+.modal.fade {
+    .modal-sm-right {
+        -webkit-transform: translate(25%, 0);
+        transform: translate(25%, 0);
+    }
+}
+
+.modal.in {
+    .modal-sm-right {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}
+
+// Scale up the modal
+@media (min-width: $screen-sm-min) {
+    // Modal sizes
+    .modal-sm {
+        width: $modal-sm;
+        &.modal-sm-right {
+            float: right;
+            margin: 0;
+        }
+    }
+}
+
+@media (min-width: $screen-sm-max) {
+    .modal-left,
+    .modal-right {
+        display: table-cell;
+        vertical-align: top;
+    }
+    .modal-left {
+        width: 570px;
+    }
+    .modal-right {
+        width: 330px;
+    }
+}
+
+@media (min-width: $screen-sm-max) {
+    .modal-order {
+        padding-top: 51px;
+        .modal-body {
+            padding-top: 15px;
+        }
+    }
+}
+
+//modal-toolbar
+.modal-toolbar {
+    display: table;
+    width: 100%;
+    padding: 15px;
+    min-height: 64px;
+    
+}
+.modal-trans{
+    .mobile-filter {
+    right: 15px;
+}
+}
+
+.modal-dark-bg {
+    background-color: #dcdcdc;
+    //display: table-cell;
+}
+
+.modal-lgray{
+    background-color: #f9f9f9;
+}
+
+.modal-gray {
+    background-color: #e6e6e6;
+}
+.modal-danger {
+    background-color: #cd493a;
+}
+
+.modal-left-radius {
+    border-radius: $border-radius-large 0 0 $border-radius-large;
+    @media (max-width: $screen-sm-min) {
+        border-radius: $border-radius-large;
+    }
+}
+
+.modal-right-radius {
+    border-radius: 0 $border-radius-large $border-radius-large 0;
+}
+
+.modal-vh100 {
+    min-height: 100vh;
+}
+
+.modal-content {
+    &.modal-radius {
+        border-radius: $border-radius-large;
+    }
+    .close {
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        font-size: 4em;
+        font-weight: 100;
+        opacity: .3;
+        filter: alpha(opacity=30);
+        z-index: 15;
+    }
+}
+
+.modal-receipt,
+.modal-expenditure,
+.modal-product {
+    .modal-header {
+        padding: 15px 30px 0;
+        border-bottom: none;
+    }
+}
+
+.modal-title,
+.modal-sub-title {
+    padding-right: 35px;    
+    @media (max-width: $screen-xs-max) {
+        font-size: 2em;
+        padding-bottom: .5em;
+    }
+}
+
+//modal-body-label
+.buy-points-label,
+.buy-price-label,
+.buy-total-label {
+    color: $gray-light;
+}
+
+.buy-total-item,
+.buy-points-item,
+.buy-price-item {
+    > .icon,
+    > .fa {
+        padding-right: 15px;
+    }
+}
+
+.buy-price-cost,
+.buy-points-pv,
+.buy-total-cost,
+.vendor-name {
+    font-size: 16px;
+}
+
+.buy-points-item {
+    @media (min-width: $screen-sm-min) {
+        float: right;
+    }
+}
+
+//order-entry-control
+.order-entry-control {
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        //     @include center-block;
+        //max-width: 50%;
+        // margin: 0 auto;
+    }
+}
+
+.order-entry-total {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    .order-entry-total-item {
+        font-size: 30px;
+        font-weight: 300;
+        color: $gray-dark;
+    }
+}
+
+.order-entry-date,
+.order-entry-amount,
+.order-entry-total {
+    padding: 15px 0;
+}
+
+.order-entry-text {
+    padding-left: 15px;
+}
+
+.order-entry-label {
+    color: #999;
+}
+
+.order-entry-amount-item {
+    &.item-summ {
+        font-size: 30px;
+        margin-bottom: 15px;
+        &:last-child {
+            margin: 0;
+        }
+    }
+    &.item-profit {
+        font-size: 24px;
+    }
+}
+
+.item-success {
+    color: $brand-success;
+}
+
+.item-danger {
+    color: $brand-danger;
+}
+
+.expenditure-control {
+    padding: 20px 0;
+    margin-top: -10px;
+}
+
+.buy-price {
+    @media (min-width: $screen-sm-min) {
+        &.receipt-state {
+            margin-top: 20px;
+        }
+    }
+}
+
+//custom modal list item
+.prod-list {
+    font-size: 16px;
+    .prod-list-item {
+        display: table;
+        > * {
+            display: table-cell;
+            vertical-align: middle;
+        }
+//        .item-uint,.item-cost{
+//         top: 0;   
+//        }
+    }
+    .icon-lg {
+        height: 36px;        
+    }
+    &-item {
+        margin-bottom: 10px;
+        .list-item-tx {
+            padding-left: 15px;
+        }
+    }
+}
+
+
+
+//variant prod list item
+.item-storage{
+    color: $brand-primary;
+}
+
+.item-uint{
+    font-size: 16px;
+    line-height: 1;
+}
+
+.item-cost{
+    color: $brand-danger;
+}
+
+.item-pv{
+    color: $brand-success;
+}
+
+
+.media-footer-bottom {
+    .modal-form-list {
+        margin-bottom: 15px;
+        &.buy-total {
+            margin-bottom: 0;
+        }
+    }
+}
+
+//transaction-alert-text
+.trans-alert{
+    margin-bottom: 30px;
+}
+
+// modal sm close transaction
+.modal-sm{
+    min-height: 300px;    
+}
+.modal-center{
+    margin: 20em auto;
+    @media (max-width: $screen-xs-max) {
+        margin: 30px auto;
+    }
+    
+}
+.modal-trans-toolbar{
+    position: relative;    
+}
+.modal-close-transaction{
+    z-index: 1080;
+}
+.modal-backdrop-transaction{
+    z-index: 1075;
+}
+.modal-backdrop{
+    .backdrop-top {
+        z-index: 1050;    
+    }    
+}

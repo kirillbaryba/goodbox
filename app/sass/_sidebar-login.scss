@@ -1,0 +1,94 @@
+.sidebar {
+    background-color: $sidebar-bg-color;
+    width: $sidebar-vw;
+    padding: $sidebar-pd;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: $global-vh;
+    min-height: $global-vh;
+    z-index: 2;
+    overflow-y: auto;
+    &-mobile{
+        
+    }
+    &-login {
+        min-width: 270px;
+        max-width: 330px;
+        margin: 0 auto;
+    }
+    &-title {
+        font-size: 32px;
+        margin: 40px 0 15px;
+        @media (max-width: 1280px) {
+            margin: 20px 0 15px;
+            font-size: 1.5em;
+        }
+        &.login-title {
+            font-size: 32px;
+        }
+        &.recovery-title {
+            font-size: 28px;
+        }
+    }
+    .sub-title {
+        color: $sidebar-sub-title-color;
+        line-height: 32px;
+        font-weight: 300;
+        margin-bottom: 0;
+    }
+    .sign-in-form,
+    .recovery-form {
+        .checkbox {
+            margin-top: -5px;
+        }
+    }
+    .sidebar-cprt {
+        padding: 15px 0 5px;
+        background: #e6e6e6;
+        position: absolute;
+        bottom: 15px;
+        z-index: 3;
+        @media (max-height: 900px) {
+            position: relative;
+            bottom: 0;
+        }
+    }
+    .sidebar-account {
+        margin-top: 60px;
+        .btn {
+            font-weight: 500;
+        }
+    }
+}
+
+.sidebar-account-txt {
+    color: $sidebar-tx-color;
+    margin: 30px 0 50px;
+}
+
+.sidebar-title-txt {
+    margin-bottom: 20px;
+}
+
+.form-enter {
+    margin-top: 40px;
+    float: left;
+    width: 100%;
+    .btn-block + .btn-link {
+        margin-top: 15px;
+    }
+}
+
+.menu-title {
+    display: inline-block;
+    vertical-align: middle;
+    &-badge {
+        position: absolute;
+        right: 0px;
+        top: 8px;
+        .badge-primary {
+            background-color: $brand-primary;
+        }
+    }
+}

@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Goodbox</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <!-- Template -->
+    <link rel="stylesheet" href="/app/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/app/bower_components/filament-tablesaw/dist/tablesaw.css">
+    <link rel="stylesheet" href="/app/bower_components/filament-tablesaw/dist/icons/**">
+    <link rel="stylesheet" href="/dist/css/main.min.css">
+
+    <!-- Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" rel="stylesheet" type='text/css'>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="/dist/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/dist/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="/dist/js/bootstrap-typeahead.js"></script>
+    <script type="text/javascript" src="/dist/js/goodbox.js"></script>
+    <script src="/app/bower_components/filament-tablesaw/dist/tablesaw.js"></script>
+    <script src="/app/bower_components/filament-tablesaw/dist/tablesaw-init.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <section class="main-admin">
+        <!-- mobile/tablet-nabvar -->
+        <nav class="navbar navbar-default navbar-fixed-top hidden-lg">
+            <div class="container-fluid">
+                <div class="navbar-body">
+                    <a class="navbar-logo" href="#"><img class="navbar-img" alt="Goodbox" src="/dist/img/goodbox-logo.svg"></a>
+                    <a id="btn-toggle-mobile" href="#" class="btn-toggle-mobile"><span class="icon icon-lg icon-menu-arrow"></span></a>
+                </div>
+            </div>
+        </nav>
+        <!-- mobile/tablet-nabvar -->
+        <div id="backdrop" class="menu-backdrop hide"></div>
+        <main class="main-dashboard">
+            <header class="main-header">
+                <div class="main-container">
+                    <h1 class="main-title">Settings</h1>
+                </div>
+            </header>
+            <!-- main-toolbar -->
+            <div class="main-toolbar toolbar-grey" id="toolbar">
+                <div class="main-container">
+                    <div class="btn-group btn-group-block btn-250" role="group">
+                        <a type="button" href="settings-account.html" class="btn btn-primary btn-outline">Account</a>
+                        <a type="button" href="settings-warehouse.html" class="btn btn-primary">Warehouse</a>
+                    </div>
+                </div>
+            </div>
+            <!-- /main-toolbar -->
+            <div class="main-container">
+                <div class="main-list" id="main-list">
+
+                    <h3 class="main-list-title">Vendor</h3>
+                    <div class="row main-list-row">
+                        <div class="col-xs-12">
+                            <div class="vendor-list">
+                                <div class="vendor-item vendor-type text-primary">Vendor name</div>
+                                <div class="vendor-item vendor-sub-title">You can change your Vendor after resetting your storage</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="main-list-title">Reset Storage Data</h3>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="alert-reset">
+                                <p class="alert-reset-item v-middle">
+                                    <span class="alert-icon fa fa-2 fa-exclamation-triangle text-danger"></span>
+                                    <span class="alert-reset-tx">Warning! This action will remove all goods and transaction history from your Warehouse</span>
+                                </p>
+                            </div>
+                            <a href="#" class="btn btn-lg btn-danger btn-outline btn-reset btn-250 btn-block" data-toggle="modal" data-target=".resset-modal-sm">Reset</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+       <aside class="sidebar sidebar-right" id="sidebar">
+            <div class="sidebar-login">
+                <div class="sidebar-main">
+                    <div class="wrapper-form">
+                        <div class="header-nav visible-lg">
+                            <a href="#" class="logo-nav"><img src="/dist/img/goodbox-logo.svg" alt="Goodbox"></a><a href="#" class="btn-toggle"><span class="icon icon-lg icon-menu-arrow"></span></a>
+                        </div>
+                        <nav class="main-nav">
+                            <div class="wr-info">
+                                <ul class="list-unstyled">
+                                    <li class="wr-name">
+                                      <div class="wr-item wr-name-icon">
+                                           <span class="wr-name-ttl" data-wname="W"></span>
+                                       </div>
+                                       <div class="wr-item wr-name-main">
+                                           <p class="wr-name-txt"> Warehouse</p>
+                                            <p class="wr-mail">goodbox@gmail.com</p>
+                                        </div>
+                                    </li>
+                                    <li class="wr-total"><span class="icon-sm icon-goods"></span><span class="span wr-total-summ"> 12 343 567 EUR <span> Goods</span></span>
+                                    </li>
+                                    <li class="wr-money text-danger"><span class="icon-sm icon-money"></span> <span class="wr-money-summ"> 7 674 765,89 EUR</span></li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="nav-link-wrapper">
+                                <ul class="list-unstyled">
+                                    <li class="nav-link-item">
+                                        <a class="active" href="#" data-toggle="tooltip" data-placement="left" title="Сводка">
+                                            <span class="icon icon-lg icon-warehouse"></span><span class="menu-title"> Сводка</span></a>
+                                    </li>
+                                    <li class="nav-link-item">
+                                        <a href="#"><span class="icon icon-lg icon-goods"></span><span class="menu-title"> Склад</span></a>
+                                    </li>
+                                    <li class="nav-link-item">
+                                        <a href="#"><span class="icon icon-lg icon-transactions"></span>                                 
+                                    <span class="menu-title"> Транзакции</span>
+                                <span class="menu-title-badge badge badge-primary"> 3</span>
+                                </a>
+                                    </li>
+                                    <li class="nav-link-item">
+                                        <a href="#"><span class="icon icon-lg icon-transport"></span><span class="menu-title"> Поставщик</span></a>
+                                    </li>
+                                    <li class="nav-link-item">
+                                        <a href="#"><span class="icon icon-lg icon-profile"></span><span class="menu-title"> Покупатели</span></a>
+                                    </li>
+                                   <li class="nav-link-item">
+                                        <a href="#"><span class="icon icon-lg icon-reports"></span><span class="menu-title"> Отчеты</span></a>
+                                    </li>
+                                    <li class="nav-link-item">
+                                        <a href="#"><span class="icon icon-lg icon-settings"></span><span class="menu-title"> Настройки</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <div class="add-delivery btn-vertical">
+                            <button class="btn btn-lg btn-danger btn-receipt" data-toggle="modal" data-target=".modal-receipt">
+                                <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+                                <span class="btn-menu-title">Receipt</span></button>
+                            <button class="btn btn-lg btn-success btn-expenditure" data-toggle="modal" data-target=".modal-expenditure">
+                                <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+                                <span class="btn-menu-title">Expenditure</span></button>
+                        </div>
+                        <p class="made"><span class="copiright">Made with </span> <span class="icon-heart animated infinite"></span> <span class="copiright"> in</span> <a href="http://en.yena.at" target="_blank">YENA Software GmbH</a></p>
+                    </div>
+        </aside>
+    </section>
+    
+    <!-- Small modal reset -->
+    <div class="modal fade resset-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm modal-sm-right">
+            <div class="modal-content modal-danger modal-vh100">
+                <div class="modal-body">
+                    <div class="confirm">
+                        <div class="confirm-icon"><span class="icon-warning"></span></div>
+                        <div class="confirm-title">Confirm your action</div>
+                        <div class="confirm-tx"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>Voluptatem et sapiente recusandae eaque architecto deserunt harum magnam optio neque cumque!</p>
+                        </div>
+
+                    </div>
+                    <fieldset>
+                        <form>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="exampleInputFirst" placeholder="Enter your first name">
+                            </div>
+
+                            <div class="form-group has-error hide">
+                                <label class="control-label" for="exampleInputEmail3">E-mail</label>
+                                <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter password">
+                                <!-- alert-popover -->
+                                <div class="popover fade in left">
+                                    <div class="arrow"></div>
+                                    <div class="popover-content">
+                                        <div class="popover-icon">
+                                            <span class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></span>
+                                        </div>
+                                        <div class="popover-txt">
+                                            <span>Last name must contain at least 3 characters</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /alert-popover -->
+                            </div>
+                            <div class="form-enter">
+                                <a onclick="$('.resset-modal-sm').modal('hide')" class="btn btn-block btn-danger btn-outline btn-inverse" data-toggle="modal" data-target=".warehouse-modal-sm">Reset</a>
+                                <a class="btn btn-block btn-link btn-link-danger" data-dismiss="modal" aria-label="Close">Cancel</a>
+                            </div>
+                        </form>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Small modal reset-->
+
+   
+<!-- Small warehouse reset modal -->
+    <div class="modal fade warehouse-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm modal-sm-right">
+            <div class="modal-content modal-gray modal-vh100">
+                <div class="modal-body">
+                    <div class="sidebar-modal-sm">
+                        <div class="sidebar-logo">
+                            <a href="/" title="Goodbox">
+                                <img src="/dist/img/goodbox-logo.svg" alt="Goodbox" title="A simple way to keep 
+your goods in order">
+                            </a>
+                        </div>
+                        <div class="sidebar-main">
+                            <div class="sidebar-form">
+                                <div class="sidebar-title">Warehouse reset</div>
+                                <div class="sidebar-title-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, officia.</div>
+                                <fieldset>
+                                    <form>
+                                        <div class="form-group">
+                                           <select class="selectpicker" data-width="100%" data-live-search="true">
+                                        <optgroup label="Choose you customer" data-max-options="2">
+                                            <option>Add new customer</option>
+                                            <option>Anonymus customer</option>
+                                            <option>Debit</option>
+                                            <option>Customer name 3</option>                                            
+                                            <optgroup label="All cutomers" data-max-options="2">
+                                                <option>2</option>
+                                                <option>3</option>
+                                    </select> 
+                                            
+                                        </div>                                        
+                                        <div class="form-enter">
+                                            <a class="btn btn-block btn-primary" data-dismiss="modal" aria-label="Close">Continue</a>                                     
+                                        </div>
+                                    </form>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Small warehouse reset modal -->
+   
+   
+   
+    <!-- modal-receipt -->
+    <div class="modal fade modal-receipt" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content modal-gray modal-radius">
+                <div class="modal-left modal-left-radius modal-dark-bg">
+                    <div class="modal-goods">
+                        <div class="modal-header">
+                            <div class="modal-title h1">New transactions</div>
+                            <div class="modal-sub-title h2">Goods</div>
+                        </div>
+                        <!-- modal-toolbar -->
+                        <div class="modal-toolbar toolbar-dark-grey" id="toolbar">
+                            <div class="transaction">
+                                <!-- modal-search -->
+                                <div class="form-search">
+                                    <div class="col-xs-12">
+                                        <input id="live-search-modal" type="text" class="form-control" placeholder="Enter customer name">
+                                        <span class="icon icon-search"></span>
+                                    </div>
+                                </div>
+                                <!-- /modal-search -->
+                            </div>
+                            <!-- /modal-toolbar -->
+                        </div>
+                        <!-- search-item-->
+                        <div class="transaction-body">
+                            <div class="transaction-items-list">
+                                <div class="col-md-12">
+                                    <div class="media media-list fade in">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                        <div class="media-container">
+                                            <div class="media-left">
+                                                <a href="#" class="media-link"> <img class="media-object media-img media-wh" data-src="holder.js/64x64" alt="64x64" style="width: 64px; height: 64px;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTU0ZjU3MjU4YSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NTRmNTcyNThhIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true"> </a>
+                                            </div>
+                                            <div class="media-body">
+                                                <a href="#" class="media-heading h4">Media heading</a>
+                                                <div class="media-body-content">
+                                                    <div class="media-vendor-name">Amway Ukraine</div>
+                                                    <div class="units-count v-middle">
+                                                        <span class="icon icon-sm icon-goods"></span>
+                                                        <span class="units-count-txt"><b>14 Units</b> (in stock)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="media-footer media-footer-bg">
+                                            <div class="media-footer-top">
+                                                <div class="row">
+                                                    <div class="col-md-7 col-sm-6 col-xs-12">
+
+                                                        <!-- validate add class from-group .has-error-->
+                                                        <div class="form-group addon-label">
+                                                            <label class="control-label" for="exampleInputQuantity">Quantity:</label>
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><span class="icon icon-sm icon-goods"></span></span>
+                                                                <input type="number" class="form-control" id="exampleInputQuantity" placeholder="Enter quantity">
+                                                            </div>
+                                                            <!-- alert-popover -->
+                                                            <div class="popover fade in top">
+                                                                <div class="arrow"></div>
+                                                                <div class="popover-content">
+                                                                    <div class="popover-icon">
+                                                                        <span class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></span>
+                                                                    </div>
+                                                                    <div class="popover-txt">
+                                                                        <span>Can't order more than left in stock</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /alert-popover -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 col-sm-6 col-xs-12">
+                                                        <div class="form-group addon-label has-success">
+                                                            <label class="control-label" for="exampleInputSell">Sell price:</label>
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><span class="icon icon-sm icon-money"></span></span>
+                                                                <span class="input-group-icon icon-euro icon-success"></span>
+                                                                <input type="number" class="form-control form-icon" id="exampleInputSell" placeholder="Enter sell price">
+
+                                                            </div>
+                                                            <!-- alert-popover -->
+                                                            <div class="popover fade in left">
+                                                                <div class="arrow"></div>
+                                                                <div class="popover-content">
+                                                                    <div class="popover-icon">
+                                                                        <span class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></span>
+                                                                    </div>
+                                                                    <div class="popover-txt">
+                                                                        <span>Can't order more than left in stock</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /alert-popover -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="media-footer-bottom">
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-6 col-md-7">
+                                                        <div class="row">
+                                                            <div class="col-xs-12 col-sm-7 col-md-7">
+                                                                <div class="modal-form-list buy-price">
+                                                                    <div class="buy-price-item v-middle">
+                                                                        <span class="icon icon-sm icon-money is-gray"></span>
+                                                                        <div class="buy-price-label">Buy price:</div>
+                                                                        <div class="buy-price-cost text-danger">87.16 EUR</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xs-12 col-sm-5 col-md-5">
+                                                                <div class="modal-form-list buy-points">
+                                                                    <div class="buy-points-item v-middle">
+                                                                        <span class="fa fa-2 fa-diamond is-gray"></span>
+                                                                        <div class="buy-points-label">Points:</div>
+                                                                        <div class="buy-points-pv text-success">40PV</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-4 col-md-5">
+                                                        <div class="modal-form-list buy-total">
+                                                            <div class="buy-total-item v-middle">
+                                                                <span class="icon icon-sm icon-money is-gray"></span>
+                                                                <div class="buy-total-label">Total:</div>
+                                                                <div class="buy-total-cost text-success">127.16 EUR</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--                            2-->
+                            <div class="transaction-items-list">
+                                <div class="col-md-12">
+                                    <div class="media media-list fade in">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                        <div class="media-container">
+                                            <div class="media-left">
+                                                <a href="#" class="media-link"> <img class="media-object media-img media-wh" data-src="holder.js/64x64" alt="64x64" style="width: 64px; height: 64px;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTU0ZjU3MjU4YSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NTRmNTcyNThhIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true"> </a>
+                                            </div>
+                                            <div class="media-body">
+                                                <a href="#" class="media-heading h4">Media heading</a>
+                                                <div class="media-body-content">
+                                                    <div class="media-vendor-name">Amway Ukraine</div>
+                                                    <div class="units-count v-middle">
+                                                        <span class="icon icon-sm icon-goods"></span>
+                                                        <span class="units-count-txt"><b>14 Units</b> (in stock)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="media-footer media-footer-bg">
+                                            <div class="media-footer-top">
+                                                <div class="row">
+                                                    <div class="col-md-7 col-sm-6 col-xs-12">
+
+                                                        <!-- validate add class from-group .has-error-->
+                                                        <div class="form-group addon-label">
+                                                            <label class="control-label" for="exampleInputQuantity2">Quantity:</label>
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><span class="icon icon-sm icon-goods"></span></span>
+                                                                <input type="number" class="form-control" id="exampleInputQuantity" placeholder="Enter quantity">
+                                                            </div>
+                                                            <!-- alert-popover -->
+                                                            <div class="popover fade in top">
+                                                                <div class="arrow"></div>
+                                                                <div class="popover-content">
+                                                                    <div class="popover-icon">
+                                                                        <span class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></span>
+                                                                    </div>
+                                                                    <div class="popover-txt">
+                                                                        <span>Can't order more than left in stock</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /alert-popover -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 col-sm-6 col-xs-12">
+                                                        <div class="form-group addon-label">
+                                                            <label class="control-label" for="exampleInputSell2">Sell price:</label>
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><span class="icon icon-sm icon-money"></span></span>
+                                                                <span class="input-group-icon icon-uah icon-success"></span>
+                                                                <input type="number" class="form-control form-icon" id="exampleInputSell2" placeholder="Enter sell price">
+                                                            </div>
+                                                            <!-- alert-popover -->
+                                                            <div class="popover fade in left">
+                                                                <div class="arrow"></div>
+                                                                <div class="popover-content">
+                                                                    <div class="popover-icon">
+                                                                        <span class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></span>
+                                                                    </div>
+                                                                    <div class="popover-txt">
+                                                                        <span>Can't order more than left in stock</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /alert-popover -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="media-footer-bottom">
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-6 col-md-7">
+                                                        <div class="row">
+                                                            <div class="col-xs-12 col-sm-7 col-md-7">
+                                                                <div class="modal-form-list buy-price">
+                                                                    <div class="buy-price-item v-middle">
+                                                                        <span class="icon icon-sm icon-money is-gray"></span>
+                                                                        <div class="buy-price-label">Buy price:</div>
+                                                                        <div class="buy-price-cost text-danger">1 187.16 EUR</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xs-12 col-sm-5 col-md-5">
+                                                                <div class="modal-form-list buy-points">
+                                                                    <div class="buy-points-item v-middle">
+                                                                        <span class="fa fa-2 fa-diamond is-gray"></span>
+                                                                        <div class="buy-points-label">Points:</div>
+                                                                        <div class="buy-points-pv text-success">40PV</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-4 col-md-5">
+                                                        <div class="modal-form-list buy-total">
+                                                            <div class="buy-total-item v-middle">
+                                                                <span class="icon icon-sm icon-money is-gray"></span>
+                                                                <div class="buy-total-label">Total:</div>
+                                                                <div class="buy-total-cost text-success">1 127.16 EUR</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--                            2-->
+                            <!-- /search-item-->
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-right modal-right-radius">
+                    <button type="button" class="close transaction-close"  data-toggle="modal" data-target=".modal-close-transaction"><span aria-hidden="true">&times;</span></button>
+
+                    <div class="modal-order">
+                        <div class="modal-header">
+                            <div class="modal-sub-title h2">Order Entry</div>
+                        </div>
+                        <!-- modal-entry-toolbar -->
+                        <div class="modal-toolbar toolbar-light-grey" id="toolbar">
+                            <div class="col-xs-12">
+                                <div class="select-order">
+                                    <select class="selectpicker" data-width="100%" data-live-search="true">
+                                        <optgroup label="Choose you customer" data-max-options="2">
+                                            <option>Add new customer</option>
+                                            <option>Anonymus customer</option>
+                                            <option>Debit</option>
+                                            <option>Customer name 3</option>
+                                            <!--                                        <option role="separator" class="divider"></option>                                        -->
+                                            <optgroup label="All cutomers" data-max-options="2">
+                                                <option>2</option>
+                                                <option>3</option>
+                                    </select>
+                                    <!-- alert-entry-popover -->
+                                    <div class="popover fade in top">
+                                        <div class="arrow"></div>
+                                        <div class="popover-content">
+                                            <div class="popover-icon">
+                                                <span class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></span>
+                                            </div>
+                                            <div class="popover-txt">
+                                                <span>Can't order more than left in stock</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /alert-entry-popover -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /modal-entry-toolbar -->
+                        <div class="modal-body">
+                            <div class="order-entry-control">
+                                <div class="btn-group btn-group-block" role="group" aria-label="...">
+                                    <a type="button" class="btn btn-danger btn-outline">Receipt</a>
+                                    <a type="button" class="btn btn-success">Expenditure</a>
+                                </div>
+
+                                <div class="order-entry-date v-middle">
+                                    <span class="icon icon-sm icon-calendar"></span>
+                                    <span class="order-entry-text">04 November 2015</span>
+                                </div>
+
+                                <div class="order-entry-total">
+                                    <div class="order-entry-label">Total:</div>
+                                    <div class="order-entry-total-item item-goods">12 Goods</div>
+                                    <div class="order-entry-total-item item-units">48 Units</div>
+                                    <div class="order-entry-total-item item-pv">330 PV</div>
+                                </div>
+
+                                <div class="order-entry-amount">
+                                    <div class="order-entry-label">Amount:</div>
+                                    <div class="order-entry-amount-item item-summ item-success">7 844,38 EUR</div>
+                                    <div class="order-entry-label">Profit:</div>
+                                    <div class="order-entry-amount-item item-profit item-success">474,82 EUR</div>
+                                </div>
+
+                                <div class="expenditure">
+                                    <div class="expenditure-control">
+                                        <button class="btn btn-lg btn-success btn-expenditure" data-dismiss="modal" aria-label="Close">
+                                            <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+                                            <span class="btn-menu-title">Execute</span></button>
+                                    </div>
+                                    <div class="expenditure-text">
+                                        <div class="form-group">
+                                            <label class="control-label" for="textComments">Comment</label>
+                                            <textarea class="form-control" style="width: 100%; resize: none" name="comments" id="textComments" cols="30" rows="6" placeholder="Type your comments"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- /modal-receipt -->
+
+
+    <!-- modal-expenditure -->
+    <div class="modal fade modal-expenditure" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content modal-gray modal-radius">
+                <div class="modal-left modal-left-radius modal-dark-bg">
+                    <div class="modal-goods">
+                        <div class="modal-header">
+                            <div class="modal-title h1">New Transaction</div>
+                            <div class="modal-sub-title h2">Goods</div>
+                        </div>
+                        <!-- modal-toolbar -->
+                        <div class="modal-toolbar toolbar-dark-grey" id="toolbar">
+                            <div class="transaction">
+                                <!-- modal-search -->
+                                <div class="form-search">
+                                    <div class="col-xs-12">
+                                        <input id="live-search-modal" type="text" class="form-control" placeholder="Enter customer name">
+                                        <span class="icon icon-search"></span>
+                                    </div>
+                                </div>
+                                <!-- /modal-search -->
+                            </div>
+                            <!-- /modal-toolbar -->
+                        </div>
+                        <!-- search-item-->
+                        <div class="transaction-body">
+
+                            <!-- search result message empty-list-->
+                            <div class="transaction-items-list empty-list hide">
+                                <div class="col-md-12">
+                                    <div class="center-block">
+                                        <div class="empty-list-icon text-center"><img class="empty-list-img" src="/app/img/smile-sad.svg" alt="There are no items in this Transaction."></div>
+                                        <div class="empty-list-ms text-center">There are no items in this Transaction.
+                                            <br> Add new item using the field on top
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /search result message empty-list-->
+
+                            <div class="transaction-items-list">
+                                <div class="col-md-12">
+                                    <div class="media media-list fade in">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                        <div class="media-container">
+                                            <div class="media-left">
+                                                <a href="#" class="media-link"> <img class="media-object media-img media-wh" data-src="holder.js/64x64" alt="64x64" style="width: 64px; height: 64px;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTU0ZjU3MjU4YSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NTRmNTcyNThhIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true"> </a>
+                                            </div>
+                                            <div class="media-body">
+                                                <a href="#" class="media-heading h4">Media heading</a>
+                                                <div class="media-body-content">
+                                                    <div class="media-vendor-name">Amway Ukraine</div>
+                                                    <div class="units-count v-middle">
+                                                        <span class="icon icon-sm icon-goods"></span>
+                                                        <span class="units-count-txt"><b>14 Units</b> (in stock)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="media-footer media-footer-bg">
+                                            <div class="media-footer-top">
+                                                <div class="row">
+                                                    <div class="col-md-7 col-sm-6 col-xs-12">
+
+                                                        <!-- validate add class from-group .has-error-->
+                                                        <div class="form-group addon-label">
+                                                            <label class="control-label" for="exampleInputQuantity35">Quantity:</label>
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><span class="icon icon-sm icon-goods"></span></span>
+                                                                <input type="number" class="form-control" id="exampleInputQuantity35" placeholder="Enter quantity">
+                                                            </div>
+                                                            <!-- alert-popover -->
+                                                            <div class="popover fade in top">
+                                                                <div class="arrow"></div>
+                                                                <div class="popover-content">
+                                                                    <div class="popover-icon">
+                                                                        <span class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></span>
+                                                                    </div>
+                                                                    <div class="popover-txt">
+                                                                        <span>Can't order more than left in stock</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /alert-popover -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 col-sm-6 col-xs-12">
+                                                        <div class="buy-price receipt-state">
+                                                            <div class="buy-price-item v-middle">
+                                                                <span class="icon icon-sm icon-money is-gray"></span>
+                                                                <div class="buy-price-label">Buy price:</div>
+                                                                <div class="buy-price-cost text-danger">187.16 EUR</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="media-footer-bottom">
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-6 col-md-7">
+                                                        <div class="row">
+                                                            <div class="col-xs-12 col-sm-6 col-md-7">
+                                                                <div class="buy-price">
+                                                                    <div class="buy-price-item v-middle">
+                                                                        <span class="icon icon-sm icon-money is-gray"></span>
+                                                                        <div class="buy-price-label">Sell price:</div>
+                                                                        <div class="buy-price-cost text-success">187.16 EUR</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xs-12 col-sm-6 col-md-5">
+                                                                <div class="buy-points">
+                                                                    <div class="buy-points-item v-middle">
+                                                                        <span class="fa fa-2 fa-diamond is-gray"></span>
+                                                                        <div class="buy-points-label">Points:</div>
+                                                                        <div class="buy-points-pv text-success">40PV</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-4 col-md-5">
+                                                        <div class="buy-total">
+                                                            <div class="buy-total-item v-middle">
+                                                                <span class="icon icon-sm icon-money is-gray"></span>
+                                                                <div class="buy-total-label">Total:</div>
+                                                                <div class="buy-total-cost text-danger">127.16 EUR</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--                            2-->
+                            <div class="transaction-items-list">
+                                <div class="col-md-12">
+                                    <div class="media media-list fade in">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                        <div class="media-container">
+                                            <div class="media-left">
+                                                <a href="#" class="media-link"> <img class="media-object media-img media-wh" data-src="holder.js/64x64" alt="64x64" style="width: 64px; height: 64px;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTU0ZjU3MjU4YSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NTRmNTcyNThhIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true"> </a>
+                                            </div>
+                                            <div class="media-body">
+                                                <a href="#" class="media-heading h4">Media heading</a>
+                                                <div class="media-body-content">
+                                                    <div class="media-vendor-name">Amway Ukraine</div>
+                                                    <div class="units-count v-middle">
+                                                        <span class="icon icon-sm icon-goods"></span>
+                                                        <span class="units-count-txt"><b>14 Units</b> (in stock)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="media-footer media-footer-bg">
+                                            <div class="media-footer-top">
+                                                <div class="row">
+                                                    <div class="col-md-7 col-sm-6 col-xs-12">
+
+                                                        <!-- validate add class from-group .has-error-->
+                                                        <div class="form-group addon-label">
+                                                            <label class="control-label" for="exampleInputQuantity352">Quantity:</label>
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><span class="icon icon-sm icon-goods"></span></span>
+                                                                <input type="number" class="form-control" id="exampleInputQuantity352" placeholder="Enter quantity">
+                                                            </div>
+                                                            <!-- alert-popover -->
+                                                            <div class="popover fade in top">
+                                                                <div class="arrow"></div>
+                                                                <div class="popover-content">
+                                                                    <div class="popover-icon">
+                                                                        <span class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></span>
+                                                                    </div>
+                                                                    <div class="popover-txt">
+                                                                        <span>Can't order more than left in stock</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /alert-popover -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 col-sm-6 col-xs-12">
+                                                        <div class="buy-price receipt-state">
+                                                            <div class="buy-price-item v-middle">
+                                                                <span class="icon icon-sm icon-money is-gray"></span>
+                                                                <div class="buy-price-label">Buy price:</div>
+                                                                <div class="buy-price-cost text-danger">187.16 EUR</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="media-footer-bottom">
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-6 col-md-7">
+                                                        <div class="row">
+                                                            <div class="col-xs-12 col-sm-6 col-md-7">
+                                                                <div class="buy-price">
+                                                                    <div class="buy-price-item v-middle">
+                                                                        <span class="icon icon-sm icon-money is-gray"></span>
+                                                                        <div class="buy-price-label">Sell price:</div>
+                                                                        <div class="buy-price-cost text-success">187.16 EUR</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xs-12 col-sm-6 col-md-5">
+                                                                <div class="buy-points">
+                                                                    <div class="buy-points-item v-middle">
+                                                                        <span class="fa fa-2 fa-diamond is-gray"></span>
+                                                                        <div class="buy-points-label">Points:</div>
+                                                                        <div class="buy-points-pv text-success">40PV</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-4 col-md-5">
+                                                        <div class="buy-total">
+                                                            <div class="buy-total-item v-middle">
+                                                                <span class="icon icon-sm icon-money is-gray"></span>
+                                                                <div class="buy-total-label">Total:</div>
+                                                                <div class="buy-total-cost text-danger">127.16 EUR</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--                            2-->
+
+                            <!-- /search-item-->
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-right modal-right-radius">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                    <div class="modal-order">
+                        <div class="modal-header">
+                            <div class="modal-sub-title h2">Order Entry</div>
+                        </div>
+                        <!-- modal-entry-toolbar -->
+                        <div class="modal-toolbar toolbar-light-grey" id="toolbar">
+                            <div class="col-xs-12">
+                                <div class="select-order">
+                                    <select class="selectpicker" data-width="100%" data-live-search="true">
+                                        <option>All types</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option role="separator" class="divider"></option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                    </select>
+                                    <!-- alert-entry-popover -->
+                                    <div class="popover fade in top">
+                                        <div class="arrow"></div>
+                                        <div class="popover-content">
+                                            <div class="popover-icon">
+                                                <span class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></span>
+                                            </div>
+                                            <div class="popover-txt">
+                                                <span>Can't order more than left in stock</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /alert-entry-popover -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /modal-entry-toolbar -->
+                        <div class="modal-body">
+                            <div class="order-entry-control">
+                                <div class="btn-group btn-group-block" role="group" aria-label="...">
+                                    <a type="button" class="btn btn-danger">Receipt</a>
+                                    <a type="button" class="btn btn-success  btn-outline">Expenditure</a>
+                                </div>
+
+                                <div class="order-entry-date v-middle">
+                                    <span class="icon icon-sm icon-calendar"></span>
+                                    <span class="order-entry-text">06 November 2015</span>
+                                </div>
+
+                                <div class="order-entry-total">
+                                    <div class="order-entry-label">Total:</div>
+                                    <div class="order-entry-total-item item-goods">12 Goods</div>
+                                    <div class="order-entry-total-item item-units">48 Units</div>
+                                    <div class="order-entry-total-item item-pv">330 PV</div>
+                                </div>
+
+                                <div class="order-entry-amount">
+                                    <div class="order-entry-label">Amount:</div>
+                                    <div class="order-entry-amount-item item-summ item-danger">7 844,38 EUR</div>
+                                </div>
+
+                                <div class="expenditure">
+                                    <div class="expenditure-control">
+                                        <button class="btn btn-lg btn-danger btn-expenditure" data-dismiss="modal" aria-label="Close">
+                                            <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+                                            <span class="btn-menu-title">Execute</span></button>
+                                    </div>
+                                    <div class="expenditure-text">
+                                        <div class="form-group">
+                                            <label class="control-label" for="textComments">Comment</label>
+                                            <textarea class="form-control" style="width: 100%; resize: none" name="comments" id="textComments" cols="30" rows="6" placeholder="Type your comments"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /modal-expenditure -->
+    
+    
+     <!-- modal-backdrop -->
+    <div id="backdrop-modal" class="modal-backdrop-transaction in hide"></div>
+    <!-- /modal-backdrop -->
+    
+      <!-- modal-close-transaction -->
+    <div class="modal fade modal-close-transaction" tabindex="-1" role="dialog" aria-labelledby="myLargeModalCloseLabel">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content modal-center modal-gray modal-radius">
+               <button id="modal-transaction-close" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <div class="modal-body">
+                   <div class="trans-alert">
+                    <div class="text-center h3">You're closing incomplete transaction</div>
+                    <div class="text-center h4">All the changes you've made will be lost</div>
+                    </div>
+                    <div class="btn-vertical btn-block">
+                        <a href="#" class="btn btn-primary btn-outline center-block btn-250 btn-modal-save-draft" data-dismiss="modal" data-target=".modal-close-transaction">Save as draft</a>
+                        <a href="#" class="btn btn-danger center-block btn-250 btn-modal-continue" data-dismiss="modal" data-target=".modal-close-transaction" >Continue</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+   
+    
+    <!-- /modal-close-transaction -->
+
+
+</body>
+
+</html>

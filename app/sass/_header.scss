@@ -1,0 +1,15 @@
+.main-header {
+    min-height: 122px;
+    @media (max-width: $screen-md-max) {
+        margin: 0 15px;
+        min-height: 110px;
+    }
+    .main-title {
+        margin: 0;
+        padding-top: 30px;
+        @media (min-width: $screen-xs-max) {
+            padding-left: 30px;    
+        }
+        
+    }
+}

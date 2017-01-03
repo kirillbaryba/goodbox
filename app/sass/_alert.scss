@@ -1,0 +1,45 @@
+.alert-reset {
+    .alert-reset-item {
+        .alert-icon {
+            padding-right: 15px;
+        }
+    }
+}
+
+//
+$confirm-color: #fff;
+
+.confirm {
+    color: $confirm-color;    
+    &-icon {
+        text-align: center;
+        margin-top: -30px;
+        padding: 100px 0;
+        @media (max-width: $screen-xs-max) {
+            padding: 2em 0;
+        }
+    }
+    &-tx{
+        margin-bottom: 2em;
+    }
+}
+
+.content-message{
+    position: absolute;
+    max-width: 30em;
+    top: 1em;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
+    transition: all ease .3s;
+    transform: translateY(-100%);    
+    &.fade{     
+        &.in{
+            transform: translateY(0%);    
+        }        
+    }
+    @media (max-width: $screen-xs-max) {
+        max-width: 90%;
+    }
+}

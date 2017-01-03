@@ -1,0 +1,21 @@
+footer {
+    color: #fff;
+    .f-list {
+        margin-bottom: 30px;
+        .item-link {
+            color: #fff;
+            &:hover,
+            &:focus {
+                color: rgb(255, 178, 172);
+                outline: none;
+                text-decoration: none;
+            }
+        }
+    }
+    .cpr{
+        margin-bottom: 20px;
+        @media (max-width: $screen-sm-max) {
+            max-width: 70%;
+        }
+    }
+}

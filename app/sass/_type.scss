@@ -1,0 +1,22 @@
+.form-group {
+    label {
+        color: $form-label-lightgrey;
+    }
+}
+
+a {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+//font weight
+
+.fw-300 {
+    font-weight: 300;
+}
+.fw-400 {
+    font-weight: 400;
+}
+.fw-700 {
+    font-weight: 700;
+}
